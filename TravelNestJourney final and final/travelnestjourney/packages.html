@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Packages | TravelNestJourney</title>
+<meta name="description" content="TravelNestJourney - Web-Based Travel Agency Management System. One smart platform for bookings, packages, payments and tours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+
+
+</head>
+<body class="">
+<div class="scroll-progress-bar"><div class="fill"></div></div>
+<div id="preloader"><i class="fa-solid fa-plane loader-plane"></i></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <span><i class="fa-solid fa-phone"></i> +880 1234-567890</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</span>
+    </div>
+    <div class="topbar-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="TravelNestJourney logo">Travel<span>Nest</span>Journey</a>
+    <div class="nav-links">
+      <a href="index.html" class="">Home</a>
+<a href="destinations.html" class="">Destinations</a>
+<a href="packages.html" class="active">Packages</a>
+<a href="about.html" class="">About</a>
+<a href="contact.html" class="">Contact</a>
+
+      <a href="dashboard.html">My Trips</a>
+      <div class="nav-mobile-auth"></div>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-auth-area flex gap-1"></div>
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-header">
+  <div class="hero-bg" data-parallax="0.25" style="background-image:url('assets/images/destinations/switzerland.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container" style="position:relative; z-index:2;">
+    <h1>Tour Packages</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Packages</span></div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="flex-between" style="flex-wrap:wrap; gap:16px; margin-bottom:10px;">
+      <div class="section-head" style="margin-bottom:0;">
+        <div class="eyebrow">Choose Your Adventure</div>
+        <h2>Browse All Packages</h2>
+      </div>
+      <p id="resultsCount" style="margin:0; font-weight:600; color:#0e9c8f;"></p>
+    </div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="Beach">Beach</button>
+      <button class="filter-btn" data-category="Adventure">Adventure</button>
+      <button class="filter-btn" data-category="Honeymoon">Honeymoon</button>
+      <button class="filter-btn" data-category="City">City</button>
+      <button class="filter-btn" data-category="Family">Family</button>
+    </div>
+    <div class="grid grid-3" id="allPackages"></div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="footer-about">
+        <a href="index.html" class="brand" style="margin-bottom:18px;"><img src="assets/images/logo.png" alt="logo">Travel<span style="color:#e9b64a">Nest</span>Journey</a>
+        <p>One smart platform for bookings, packages, payments and tours &mdash; replacing messy manual travel agency work with a seamless digital experience.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="packages.html?dest=maldives">Maldives</a></li>
+          <li><a href="packages.html?dest=bali">Bali, Indonesia</a></li>
+          <li><a href="packages.html?dest=dubai">Dubai, UAE</a></li>
+          <li><a href="packages.html?dest=coxsbazar">Cox's Bazar</a></li>
+          <li><a href="packages.html?dest=switzerland">Switzerland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> House 12, Road 5, Gulshan, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-phone"></i> +880 1234-567890</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</li>
+          <li><i class="fa-solid fa-clock"></i> Sat - Thu: 9:00 AM - 8:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <a href="index.html">TravelNestJourney</a>. All Rights Reserved. Built as a Web-Based Travel Agency Management System (CSE 346 Project).
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+<script src="js/packages.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

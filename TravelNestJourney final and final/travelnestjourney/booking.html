@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking | TravelNestJourney</title>
+<meta name="description" content="TravelNestJourney - Web-Based Travel Agency Management System. One smart platform for bookings, packages, payments and tours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+
+
+</head>
+<body class="">
+<div class="scroll-progress-bar"><div class="fill"></div></div>
+<div id="preloader"><i class="fa-solid fa-plane loader-plane"></i></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <span><i class="fa-solid fa-phone"></i> +880 1234-567890</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</span>
+    </div>
+    <div class="topbar-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="TravelNestJourney logo">Travel<span>Nest</span>Journey</a>
+    <div class="nav-links">
+      <a href="index.html" class="">Home</a>
+<a href="destinations.html" class="">Destinations</a>
+<a href="packages.html" class="">Packages</a>
+<a href="about.html" class="">About</a>
+<a href="contact.html" class="">Contact</a>
+
+      <a href="dashboard.html">My Trips</a>
+      <div class="nav-mobile-auth"></div>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-auth-area flex gap-1"></div>
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-header" style="padding:150px 0 60px;">
+  <div class="hero-bg" data-parallax="0.25" style="background-image:url('assets/images/destinations/kashmir.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container" style="position:relative; z-index:2;">
+    <h1>Complete Your Booking</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="packages.html">Packages</a> / <span>Booking</span></div>
+  </div>
+</section>
+
+<section class="section-pad" id="bookingWrap" style="padding-top:60px;">
+  <div class="container">
+
+    <div class="steps-progress">
+      <div class="step-item active" data-step-indicator="1"><div class="circle">1</div><span>Trip Details</span></div>
+      <div class="step-item" data-step-indicator="2"><div class="circle">2</div><span>Traveler Info</span></div>
+      <div class="step-item" data-step-indicator="3"><div class="circle">3</div><span>Payment</span></div>
+      <div class="step-item" data-step-indicator="4"><div class="circle">4</div><span>Confirmation</span></div>
+    </div>
+
+    <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 40px; align-items:flex-start;">
+      <div class="form-card">
+
+        <!-- Step 1: Trip Details -->
+        <div class="booking-step active" data-step="1">
+          <div class="flex gap-2" style="margin-bottom:26px; align-items:center;">
+            <img id="bk-pkg-img" src="" style="width:90px;height:90px;border-radius:14px;object-fit:cover;">
+            <div>
+              <h3 id="bk-pkg-title" style="margin-bottom:6px;"></h3>
+              <p id="bk-pkg-duration" style="margin:0;"></p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Travel Date <span class="required">*</span></label>
+              <input type="date" class="form-control" id="bk-date" required>
+            </div>
+            <div class="form-group">
+              <label>Number of Travelers <span class="required">*</span></label>
+              <input type="number" min="1" max="20" value="1" class="form-control" id="bk-travelers" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Special Requests (Optional)</label>
+            <textarea class="form-control" placeholder="Dietary requirements, accessibility needs, celebration occasions, etc."></textarea>
+          </div>
+          <div class="flex-between" style="margin-top:20px;">
+            <span></span>
+            <button class="btn btn-teal" data-next-step="2">Continue to Traveler Info <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 2: Traveler Info -->
+        <div class="booking-step" data-step="2">
+          <h3 style="margin-bottom:24px;">Traveler Information</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span class="required">*</span></label>
+              <input type="text" class="form-control" id="bk-name" placeholder="e.g. Rahim Uddin" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address <span class="required">*</span></label>
+              <input type="email" class="form-control" id="bk-email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number <span class="required">*</span></label>
+              <input type="tel" class="form-control" placeholder="+880 1XXX-XXXXXX" required>
+            </div>
+            <div class="form-group">
+              <label>NID / Passport Number <span class="required">*</span></label>
+              <input type="text" class="form-control" placeholder="For booking verification" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Emergency Contact</label>
+            <input type="tel" class="form-control" placeholder="Alternate contact number">
+          </div>
+          <div class="flex-between" style="margin-top:20px;">
+            <button class="btn btn-outline-dark" data-prev-step="1"><i class="fa-solid fa-arrow-left"></i> Back</button>
+            <button class="btn btn-teal" data-next-step="3">Continue to Payment <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3: Payment -->
+        <div class="booking-step" data-step="3">
+          <h3 style="margin-bottom:24px;">Choose Payment Method</h3>
+          <label class="payment-option selected">
+            <input type="radio" name="paymentMethod" value="bkash" checked>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <div><strong>bKash</strong><p style="margin:0;font-size:.82rem;">Pay instantly using your bKash wallet</p></div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="paymentMethod" value="nagad">
+            <i class="fa-solid fa-wallet"></i>
+            <div><strong>Nagad</strong><p style="margin:0;font-size:.82rem;">Pay instantly using your Nagad wallet</p></div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="paymentMethod" value="card">
+            <i class="fa-regular fa-credit-card"></i>
+            <div><strong>Visa / Mastercard</strong><p style="margin:0;font-size:.82rem;">Secure international card payment</p></div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="paymentMethod" value="bank">
+            <i class="fa-solid fa-building-columns"></i>
+            <div><strong>Bank Transfer</strong><p style="margin:0;font-size:.82rem;">Direct transfer to our corporate account</p></div>
+          </label>
+
+          <div class="form-group" style="margin-top:20px;">
+            <label>Card / Wallet Number (Demo Only)</label>
+            <input type="text" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX">
+          </div>
+          <div class="alert alert-success" style="margin-top:10px;">
+            <i class="fa-solid fa-lock"></i> This is a demo checkout. No real payment will be processed.
+          </div>
+          <div class="flex-between" style="margin-top:20px;">
+            <button class="btn btn-outline-dark" data-prev-step="2"><i class="fa-solid fa-arrow-left"></i> Back</button>
+            <button class="btn btn-gold" id="confirmBookingBtn"><i class="fa-solid fa-circle-check"></i> Confirm &amp; Pay</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div class="booking-step" data-step="4" style="text-align:center; padding: 40px 0;">
+          <div style="width:90px;height:90px;border-radius:50%;background:rgba(34,160,107,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+            <i class="fa-solid fa-check" style="font-size:2.4rem;color:#22a06b;"></i>
+          </div>
+          <h2>Booking Confirmed!</h2>
+          <p>Thank you for booking with TravelNestJourney. A confirmation email has been sent to you.</p>
+          <div style="background:#fbf7ee; border-radius:14px; padding:24px; max-width:400px; margin: 24px auto;">
+            <p style="margin:0 0 8px;">Booking ID</p>
+            <h3 id="bk-final-id" style="color:#0e9c8f; margin-bottom:16px;"></h3>
+            <p style="margin:0 0 8px;">Total Paid</p>
+            <h3 id="bk-final-total" style="color:#e9b64a;"></h3>
+          </div>
+          <div class="flex-center gap-2">
+            <a href="dashboard.html" class="btn btn-teal">View My Bookings</a>
+            <a href="packages.html" class="btn btn-outline-dark">Explore More Packages</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-box">
+        <h3 style="margin-bottom:20px;">Booking Summary</h3>
+        <div class="summary-row"><span>Price per person</span><span id="bk-pkg-price"></span></div>
+        <div class="summary-row"><span>Travelers</span><span id="sum-travelers">1</span></div>
+        <div class="summary-row"><span>Subtotal</span><span id="sum-subtotal"></span></div>
+        <div class="summary-row"><span>Tax &amp; Service (5%)</span><span id="sum-tax"></span></div>
+        <div class="summary-row total"><span>Total Amount</span><span id="sum-total"></span></div>
+        <div class="alert alert-success" style="margin-top:20px;">
+          <i class="fa-solid fa-shield-halved"></i> 100% secure booking &amp; free cancellation up to 7 days prior.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="footer-about">
+        <a href="index.html" class="brand" style="margin-bottom:18px;"><img src="assets/images/logo.png" alt="logo">Travel<span style="color:#e9b64a">Nest</span>Journey</a>
+        <p>One smart platform for bookings, packages, payments and tours &mdash; replacing messy manual travel agency work with a seamless digital experience.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="packages.html?dest=maldives">Maldives</a></li>
+          <li><a href="packages.html?dest=bali">Bali, Indonesia</a></li>
+          <li><a href="packages.html?dest=dubai">Dubai, UAE</a></li>
+          <li><a href="packages.html?dest=coxsbazar">Cox's Bazar</a></li>
+          <li><a href="packages.html?dest=switzerland">Switzerland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> House 12, Road 5, Gulshan, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-phone"></i> +880 1234-567890</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</li>
+          <li><i class="fa-solid fa-clock"></i> Sat - Thu: 9:00 AM - 8:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <a href="index.html">TravelNestJourney</a>. All Rights Reserved. Built as a Web-Based Travel Agency Management System (CSE 346 Project).
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+<script src="js/packages.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

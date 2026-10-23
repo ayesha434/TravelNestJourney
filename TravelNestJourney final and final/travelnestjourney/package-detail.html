@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Package Details | TravelNestJourney</title>
+<meta name="description" content="TravelNestJourney - Web-Based Travel Agency Management System. One smart platform for bookings, packages, payments and tours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+
+
+</head>
+<body class="">
+<div class="scroll-progress-bar"><div class="fill"></div></div>
+<div id="preloader"><i class="fa-solid fa-plane loader-plane"></i></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <span><i class="fa-solid fa-phone"></i> +880 1234-567890</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</span>
+    </div>
+    <div class="topbar-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="TravelNestJourney logo">Travel<span>Nest</span>Journey</a>
+    <div class="nav-links">
+      <a href="index.html" class="">Home</a>
+<a href="destinations.html" class="">Destinations</a>
+<a href="packages.html" class="active">Packages</a>
+<a href="about.html" class="">About</a>
+<a href="contact.html" class="">Contact</a>
+
+      <a href="dashboard.html">My Trips</a>
+      <div class="nav-mobile-auth"></div>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-auth-area flex gap-1"></div>
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-header" style="padding: 150px 0 60px;">
+  <div class="hero-bg" data-parallax="0.25" style="background-image:url('assets/images/destinations/dubai.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container" style="position:relative; z-index:2;">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <a href="packages.html">Packages</a> / <span id="pd-title-crumb">Package Detail</span></div>
+  </div>
+</section>
+
+<section class="section-pad" id="packageDetailWrap" style="padding-top:60px;">
+  <div class="container">
+    <div class="grid" style="grid-template-columns: 2.2fr 1fr; gap:50px; align-items:flex-start;">
+      <div>
+        <div class="pkg-loc" id="pd-location" style="margin-bottom:10px;"></div>
+        <h1 id="pd-title" style="font-size:2.2rem; margin-bottom:14px;"></h1>
+        <div id="pd-rating" class="pkg-rating" style="margin-bottom:24px;"></div>
+
+        <div class="gallery-main">
+          <img id="pd-mainimg" src="" alt="Package image">
+          <video id="pd-gallery-video" muted loop playsinline autoplay style="display:none;"></video>
+        </div>
+
+        <div class="grid grid-3" style="margin: 30px 0; gap:20px;">
+          <div class="feature-card" style="padding:22px;">
+            <i class="fa-regular fa-clock" style="color:#0e9c8f; font-size:1.4rem;"></i>
+            <h4 style="margin:10px 0 2px; font-size:1rem;">Duration</h4>
+            <p id="pd-duration" style="margin:0; font-size:.9rem;"></p>
+          </div>
+          <div class="feature-card" style="padding:22px;">
+            <i class="fa-solid fa-users" style="color:#0e9c8f; font-size:1.4rem;"></i>
+            <h4 style="margin:10px 0 2px; font-size:1rem;">Group Size</h4>
+            <p id="pd-group" style="margin:0; font-size:.9rem;"></p>
+          </div>
+          <div class="feature-card" style="padding:22px;">
+            <i class="fa-solid fa-language" style="color:#0e9c8f; font-size:1.4rem;"></i>
+            <h4 style="margin:10px 0 2px; font-size:1rem;">Language</h4>
+            <p style="margin:0; font-size:.9rem;">English, Bangla</p>
+          </div>
+        </div>
+
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="tab-overview">Overview</button>
+          <button class="tab-btn" data-tab="tab-itinerary">Itinerary</button>
+          <button class="tab-btn" data-tab="tab-includes">Includes/Excludes</button>
+          <button class="tab-btn" data-tab="tab-reviews">Reviews (<span id="pd-reviews-count-tab">0</span>)</button>
+        </div>
+        <div class="tab-content active" id="tab-overview">
+          <h3>Package Overview</h3>
+          <p id="pd-summary" style="font-size:1.02rem;"></p>
+          <h3 style="margin-top:30px;">Trip Highlights</h3>
+          <ul class="include-list" id="pd-highlights"></ul>
+        </div>
+        <div class="tab-content" id="tab-itinerary">
+          <h3>Day-by-Day Itinerary</h3>
+          <div id="pd-itinerary"></div>
+        </div>
+        <div class="tab-content" id="tab-includes">
+          <div class="grid grid-2">
+            <div>
+              <h3>What's Included</h3>
+              <ul class="include-list" id="pd-includes"></ul>
+            </div>
+            <div>
+              <h3>What's Excluded</h3>
+              <ul class="include-list exclude-list" id="pd-excludes"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="tab-reviews">
+          <h3>Traveler Reviews</h3>
+          <div id="pd-reviews-list" style="margin-bottom:30px;"></div>
+          <div id="pd-review-form-wrap"></div>
+        </div>
+      </div>
+
+      <div class="sticky-book">
+        <div class="form-card">
+          <p style="margin:0; color:#6b7c8c; font-size:.85rem;">Starting from</p>
+          <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:6px;">
+            <h2 id="pd-price" style="margin:0; background:linear-gradient(90deg,var(--navy),var(--teal-dark)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;"></h2>
+            <s id="pd-oldprice" style="color:#a9b4bd;"></s>
+          </div>
+          <p style="margin:0 0 22px; font-size:.85rem;">per person, all taxes included</p>
+          <a href="#" id="pd-bookbtn" class="btn btn-gold btn-block" style="margin-bottom:14px;"><i class="fa-solid fa-calendar-check"></i> Book This Package</a>
+          <a href="contact.html" class="btn btn-outline-dark btn-block"><i class="fa-solid fa-comment-dots"></i> Ask a Question</a>
+          <div style="margin-top:24px; padding-top:20px; border-top:1px dashed #e6e9ee; font-size:.85rem; color:#6b7c8c;">
+            <p style="margin-bottom:10px;"><i class="fa-solid fa-shield-halved" style="color:#0e9c8f;"></i> Free cancellation up to 7 days before departure</p>
+            <p style="margin:0;"><i class="fa-solid fa-lock" style="color:#0e9c8f;"></i> Secure payment via bKash, Nagad, Card</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:80px;">
+      <div class="section-head">
+        <div class="eyebrow">You May Also Like</div>
+        <h2>Related Packages</h2>
+      </div>
+      <div class="grid grid-3" id="pd-related"></div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="footer-about">
+        <a href="index.html" class="brand" style="margin-bottom:18px;"><img src="assets/images/logo.png" alt="logo">Travel<span style="color:#e9b64a">Nest</span>Journey</a>
+        <p>One smart platform for bookings, packages, payments and tours &mdash; replacing messy manual travel agency work with a seamless digital experience.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="packages.html?dest=maldives">Maldives</a></li>
+          <li><a href="packages.html?dest=bali">Bali, Indonesia</a></li>
+          <li><a href="packages.html?dest=dubai">Dubai, UAE</a></li>
+          <li><a href="packages.html?dest=coxsbazar">Cox's Bazar</a></li>
+          <li><a href="packages.html?dest=switzerland">Switzerland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> House 12, Road 5, Gulshan, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-phone"></i> +880 1234-567890</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</li>
+          <li><i class="fa-solid fa-clock"></i> Sat - Thu: 9:00 AM - 8:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <a href="index.html">TravelNestJourney</a>. All Rights Reserved. Built as a Web-Based Travel Agency Management System (CSE 346 Project).
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+<script src="js/packages.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

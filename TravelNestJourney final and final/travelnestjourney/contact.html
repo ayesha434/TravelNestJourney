@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | TravelNestJourney</title>
+<meta name="description" content="TravelNestJourney - Web-Based Travel Agency Management System. One smart platform for bookings, packages, payments and tours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+
+
+</head>
+<body class="">
+<div class="scroll-progress-bar"><div class="fill"></div></div>
+<div id="preloader"><i class="fa-solid fa-plane loader-plane"></i></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <span><i class="fa-solid fa-phone"></i> +880 1234-567890</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</span>
+    </div>
+    <div class="topbar-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="TravelNestJourney logo">Travel<span>Nest</span>Journey</a>
+    <div class="nav-links">
+      <a href="index.html" class="">Home</a>
+<a href="destinations.html" class="">Destinations</a>
+<a href="packages.html" class="">Packages</a>
+<a href="about.html" class="">About</a>
+<a href="contact.html" class="active">Contact</a>
+
+      <a href="dashboard.html">My Trips</a>
+      <div class="nav-mobile-auth"></div>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-auth-area flex gap-1"></div>
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-header">
+  <div class="hero-bg" data-parallax="0.25" style="background-image:url('assets/images/destinations/santorini.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container" style="position:relative; z-index:2;">
+    <h1>Get In Touch</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="grid grid-3" style="margin-bottom:60px;">
+      <div class="contact-info-card">
+        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Visit Us</h3>
+        <p>House 12, Road 5, Gulshan, Dhaka, Bangladesh</p>
+      </div>
+      <div class="contact-info-card">
+        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+        <h3>Call Us</h3>
+        <p>+880 1234-567890<br>+880 1234-567891</p>
+      </div>
+      <div class="contact-info-card">
+        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+        <h3>Email Us</h3>
+        <p>hello@travelnestjourney.com<br>support@travelnestjourney.com</p>
+      </div>
+    </div>
+
+    <div class="grid" style="grid-template-columns: 1fr 1fr; gap:50px; align-items:flex-start;">
+      <div class="form-card">
+        <h3 style="margin-bottom:22px;">Send Us a Message</h3>
+        <div class="alert alert-success" id="contactAlert" style="display:none;">
+          <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent. We'll get back to you within 24 hours.
+        </div>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span class="required">*</span></label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address <span class="required">*</span></label>
+              <input type="email" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" class="form-control" placeholder="e.g. Question about Maldives package">
+          </div>
+          <div class="form-group">
+            <label>Message <span class="required">*</span></label>
+            <textarea class="form-control" required placeholder="Tell us how we can help..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-teal btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+      <div>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps?q=Gulshan,Dhaka,Bangladesh&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="feature-card" style="margin-top:30px; text-align:left;">
+          <h3><i class="fa-solid fa-clock" style="color:#0e9c8f;"></i> Office Hours</h3>
+          <p style="display:flex; justify-content:space-between;"><span>Saturday - Thursday</span><span>9:00 AM - 8:00 PM</span></p>
+          <p style="display:flex; justify-content:space-between; margin:0;"><span>Friday</span><span>Closed</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="footer-about">
+        <a href="index.html" class="brand" style="margin-bottom:18px;"><img src="assets/images/logo.png" alt="logo">Travel<span style="color:#e9b64a">Nest</span>Journey</a>
+        <p>One smart platform for bookings, packages, payments and tours &mdash; replacing messy manual travel agency work with a seamless digital experience.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="packages.html?dest=maldives">Maldives</a></li>
+          <li><a href="packages.html?dest=bali">Bali, Indonesia</a></li>
+          <li><a href="packages.html?dest=dubai">Dubai, UAE</a></li>
+          <li><a href="packages.html?dest=coxsbazar">Cox's Bazar</a></li>
+          <li><a href="packages.html?dest=switzerland">Switzerland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> House 12, Road 5, Gulshan, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-phone"></i> +880 1234-567890</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</li>
+          <li><i class="fa-solid fa-clock"></i> Sat - Thu: 9:00 AM - 8:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <a href="index.html">TravelNestJourney</a>. All Rights Reserved. Built as a Web-Based Travel Agency Management System (CSE 346 Project).
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+<script src="js/packages.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

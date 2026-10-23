@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard | TravelNestJourney</title>
+<meta name="description" content="TravelNestJourney - Web-Based Travel Agency Management System. One smart platform for bookings, packages, payments and tours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+
+
+</head>
+<body class="">
+<div class="scroll-progress-bar"><div class="fill"></div></div>
+<div id="preloader"><i class="fa-solid fa-plane loader-plane"></i></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <span><i class="fa-solid fa-phone"></i> +880 1234-567890</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</span>
+    </div>
+    <div class="topbar-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="TravelNestJourney logo">Travel<span>Nest</span>Journey</a>
+    <div class="nav-links">
+      <a href="index.html" class="">Home</a>
+<a href="destinations.html" class="">Destinations</a>
+<a href="packages.html" class="">Packages</a>
+<a href="about.html" class="">About</a>
+<a href="contact.html" class="">Contact</a>
+
+      <a href="dashboard.html">My Trips</a>
+      <div class="nav-mobile-auth"></div>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-auth-area flex gap-1"></div>
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-header" style="padding:150px 0 60px;">
+  <div class="hero-bg" data-parallax="0.25" style="background-image:url('assets/images/destinations/switzerland.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container" style="position:relative; z-index:2;">
+    <h1>My Dashboard</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>My Trips</span></div>
+  </div>
+</section>
+
+<section class="section-pad" style="padding-top:60px;">
+  <div class="container">
+    <div class="grid" style="grid-template-columns: 280px 1fr; gap:36px; align-items:flex-start;">
+      <div class="dash-sidebar">
+        <div class="dash-profile">
+          <img src="assets/images/destinations/kashmir.jpg" alt="profile">
+          <h3 id="dash-username" style="font-size:1.1rem; margin-bottom:4px;">Guest User</h3>
+          <p id="dash-useremail" style="margin:0; font-size:.82rem;"></p>
+        </div>
+        <a href="dashboard.html" class="active"><i class="fa-solid fa-gauge"></i> My Bookings</a>
+        <a href="packages.html"><i class="fa-solid fa-suitcase-rolling"></i> Browse Packages</a>
+        <a href="contact.html"><i class="fa-solid fa-headset"></i> Support</a>
+        <a href="index.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </div>
+
+      <div>
+        <div class="grid grid-3 summary-cards" style="margin-bottom:36px;">
+          <div class="card">
+            <div class="icon" style="background:linear-gradient(135deg,#0e9c8f,#0a7a70);"><i class="fa-solid fa-calendar-check"></i></div>
+            <div><h3 id="dash-total-bookings" style="margin-bottom:2px;">0</h3><p style="margin:0; font-size:.85rem;">Total Bookings</p></div>
+          </div>
+          <div class="card">
+            <div class="icon" style="background:linear-gradient(135deg,#e9b64a,#d99f2e);"><i class="fa-solid fa-plane-departure"></i></div>
+            <div><h3 id="dash-upcoming" style="margin-bottom:2px;">0</h3><p style="margin:0; font-size:.85rem;">Upcoming Trips</p></div>
+          </div>
+          <div class="card">
+            <div class="icon" style="background:linear-gradient(135deg,#071426,#0c1f36);"><i class="fa-solid fa-sack-dollar"></i></div>
+            <div><h3 id="dash-total-spent" style="margin-bottom:2px;">৳0</h3><p style="margin:0; font-size:.85rem;">Total Spent</p></div>
+          </div>
+        </div>
+
+        <div class="flex-between" style="margin-bottom:20px;">
+          <h3 style="margin:0;">My Bookings</h3>
+          <a href="packages.html" class="btn btn-teal btn-sm"><i class="fa-solid fa-plus"></i> New Booking</a>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="booking-table">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Package</th>
+                <th>Travel Date</th>
+                <th>Travelers</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="dashboardBookings"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="footer-about">
+        <a href="index.html" class="brand" style="margin-bottom:18px;"><img src="assets/images/logo.png" alt="logo">Travel<span style="color:#e9b64a">Nest</span>Journey</a>
+        <p>One smart platform for bookings, packages, payments and tours &mdash; replacing messy manual travel agency work with a seamless digital experience.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="packages.html?dest=maldives">Maldives</a></li>
+          <li><a href="packages.html?dest=bali">Bali, Indonesia</a></li>
+          <li><a href="packages.html?dest=dubai">Dubai, UAE</a></li>
+          <li><a href="packages.html?dest=coxsbazar">Cox's Bazar</a></li>
+          <li><a href="packages.html?dest=switzerland">Switzerland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> House 12, Road 5, Gulshan, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-phone"></i> +880 1234-567890</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</li>
+          <li><i class="fa-solid fa-clock"></i> Sat - Thu: 9:00 AM - 8:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <a href="index.html">TravelNestJourney</a>. All Rights Reserved. Built as a Web-Based Travel Agency Management System (CSE 346 Project).
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+<script src="js/packages.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | TravelNestJourney</title>
+<meta name="description" content="TravelNestJourney - Web-Based Travel Agency Management System. One smart platform for bookings, packages, payments and tours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+
+
+</head>
+<body class="">
+<div class="scroll-progress-bar"><div class="fill"></div></div>
+<div id="preloader"><i class="fa-solid fa-plane loader-plane"></i></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <span><i class="fa-solid fa-phone"></i> +880 1234-567890</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</span>
+    </div>
+    <div class="topbar-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/images/logo.png" alt="TravelNestJourney logo">Travel<span>Nest</span>Journey</a>
+    <div class="nav-links">
+      <a href="index.html" class="">Home</a>
+<a href="destinations.html" class="">Destinations</a>
+<a href="packages.html" class="">Packages</a>
+<a href="about.html" class="">About</a>
+<a href="contact.html" class="">Contact</a>
+
+      <a href="dashboard.html">My Trips</a>
+      <div class="nav-mobile-auth"></div>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-auth-area flex gap-1"></div>
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+
+<div class="auth-wrap">
+  <div class="auth-visual" data-parallax="0.15" style="background-image:url('assets/images/destinations/bali.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="auth-visual-content">
+      <a href="index.html" class="brand" style="margin-bottom:30px;"><img src="assets/images/logo.png" alt="logo">Travel<span style="color:#e9b64a;">Nest</span>Journey</a>
+      <h1 style="color:#fff; max-width:420px;">Start Your Journey With Us.</h1>
+      <p style="color:rgba(255,255,255,.85); max-width:420px;">Create a free account to book packages, track payments and get exclusive member-only deals.</p>
+    </div>
+  </div>
+  <div class="auth-form-side">
+    <div class="auth-box">
+      <h2>Create an Account</h2>
+      <p>Already have an account? <a href="login.html" style="color:#0e9c8f; font-weight:600;">Login here</a></p>
+      <div class="alert alert-error" id="authError" style="display:none; margin-top:16px;"></div>
+      <form id="registerForm" style="margin-top:20px;">
+        <div class="form-group input-icon">
+          <label>Full Name</label>
+          <i class="fa-regular fa-user"></i>
+          <input type="text" class="form-control" id="regName" required placeholder="e.g. Rahim Uddin">
+        </div>
+        <div class="form-group input-icon">
+          <label>Email Address</label>
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" class="form-control" id="regEmail" required placeholder="you@example.com">
+        </div>
+        <div class="form-group input-icon">
+          <label>Phone Number</label>
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" class="form-control" id="regPhone" required placeholder="+880 1XXX-XXXXXX">
+        </div>
+        <div class="form-group input-icon">
+          <label>Password</label>
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" class="form-control" id="regPassword" required placeholder="Create a strong password">
+        </div>
+        <label class="checkbox-row" style="margin-bottom:20px;"><input type="checkbox" required> I agree to the Terms &amp; Privacy Policy</label>
+        <button type="submit" class="btn btn-teal btn-block">Create Account <i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <div class="divider">or sign up with</div>
+      <div class="social-login">
+        <button type="button"><i class="fa-brands fa-google" style="color:#DB4437;"></i> Google</button>
+        <button type="button"><i class="fa-brands fa-facebook" style="color:#1877F2;"></i> Facebook</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="footer-about">
+        <a href="index.html" class="brand" style="margin-bottom:18px;"><img src="assets/images/logo.png" alt="logo">Travel<span style="color:#e9b64a">Nest</span>Journey</a>
+        <p>One smart platform for bookings, packages, payments and tours &mdash; replacing messy manual travel agency work with a seamless digital experience.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Tour Packages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Top Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="packages.html?dest=maldives">Maldives</a></li>
+          <li><a href="packages.html?dest=bali">Bali, Indonesia</a></li>
+          <li><a href="packages.html?dest=dubai">Dubai, UAE</a></li>
+          <li><a href="packages.html?dest=coxsbazar">Cox's Bazar</a></li>
+          <li><a href="packages.html?dest=switzerland">Switzerland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-location-dot"></i> House 12, Road 5, Gulshan, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-phone"></i> +880 1234-567890</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@travelnestjourney.com</li>
+          <li><i class="fa-solid fa-clock"></i> Sat - Thu: 9:00 AM - 8:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <a href="index.html">TravelNestJourney</a>. All Rights Reserved. Built as a Web-Based Travel Agency Management System (CSE 346 Project).
+    </div>
+  </div>
+</footer>
+<button class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+<script src="js/packages.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
